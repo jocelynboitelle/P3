@@ -3,26 +3,59 @@ body {
     padding: 0;
 }
 
+/************************ ICONS ************************/
+
+.fas {
+    color: white;
+}
+
 /************************ HEADER ************************/
 
 #header {
     width: 100%;
     height: 100vh;
-}
-
-#header #slider {
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#header #slider img {
+#slider {
+    position: relative;
     height: 80%;
     width: 70%;
+}
+
+#slide {
+    height: 100%;
+    width: 100%;
     object-fit: cover;
     box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+}
+
+#slider-control {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+#slider-control .button {
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#slider-control #playing {
+    width: 90%;
+    opacity: 0;
+}
+
+#slider-control #playing:hover {
+    opacity: 1;
 }
 
 /************************ MAIN ************************/

@@ -6,17 +6,18 @@
     <meta charset=utf-8>
     <meta name="description" content="Retrouvez les stations de vélibs sur Todivouse.">
     <meta name="viewport" content="width=device-width">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="public/css/style.css" type="text/css">
 </head>
 
 <body>
     <header id="header">
         <div id="slider">
-            <img name="slide">
+            <img id="slide" name="slide">
             <div id="slider-control">
-                <button id="prev" onclick="prev()"></button>
-                <button id="playing">Pause</button>
-                <button id="next" onclick="next()"></button>
+                <div class="button" id="prev"><i class="fas fa-chevron-left fa-3x"></i></div>
+                <div class="button" id="playing"><i class="fas fa-pause fa-3x"></i></div>
+                <div class="button" id="next"><i class="fas fa-chevron-right fa-3x"></i></div>
             </div>
         </div>
     </header>
