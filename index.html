@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Vélib'Rose</title>
+    <meta charset=utf-8>
+    <meta name="description" content="Retrouvez les stations de vélibs sur Todivouse.">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="public/css/style.css" type="text/css">
+</head>
+
+<body>
+    <header id="header">
+        <div id="slider">
+            <img name="slide">
+            <div id="slider-control">
+                <button id="prev" onclick="prev()"></button>
+                <button id="playing">Pause</button>
+                <button id="next" onclick="next()"></button>
+            </div>
+        </div>
+    </header>
+    
+    <main id="main">
+        <section id="map"></section>
+        <section id="reservation"></section>
+    </main>
+    <footer id="footer">
+        <section id="status"></section>
+    </footer>
+</body>
+
+
+</html>
+
+<script src="public/js/slider.js"></script>
