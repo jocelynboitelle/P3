@@ -6,7 +6,7 @@ const playingButton = document.getElementById('playing');
 const nextButton = document.getElementById('next');
 const prevButton = document.getElementById('prev');
 const length = images.length;
-const timer = 1000;
+const timer = 5000;
 
 let index = 1;
 let playing = true;
