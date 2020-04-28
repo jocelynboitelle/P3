@@ -2,36 +2,75 @@
 <html lang="fr">
 
 <head>
-    <title>Vélib'Rose</title>
     <meta charset=utf-8>
     <meta name="description" content="Retrouvez les stations de vélibs sur Todivouse.">
     <meta name="viewport" content="width=device-width">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Vélib'Rose</title>
     <link rel="stylesheet" href="public/css/style.css" type="text/css">
+    <link rel="shortcut icon" href="public/img/bicycle.ico">
+    <script type="module" src="public/js/main.js"></script>
+    <script type="module" src="public/js/Slider.js"></script>
+    <script type="module" src="public/js/Map.js"></script>
+    <script type="module" src="public/js/InfoStation.js"></script>
+    <script type="module" src="public/js/Canvas.js"></script>
+    <script type="module" src="public/js/Reservation.js"></script>
+    <script type="module" src="public/js/User.js"></script>
+    <script type="module" src="public/js/ReservationComponent.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="public/js/getApi.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoV_i6GU85vdFcUl2y5JYF_Hh354w8pfI"></script>
 </head>
 
 <body>
     <header id="header">
         <div id="slider">
-            <img id="slide" name="slide">
+            <img id="slide">
             <div id="slider-control">
-                <div class="button" id="prev"><i class="fas fa-chevron-left fa-3x"></i></div>
-                <div class="button" id="playing"><i class="fas fa-pause fa-3x"></i></div>
-                <div class="button" id="next"><i class="fas fa-chevron-right fa-3x"></i></div>
+                <div class="control" id="prev"><i id="prev-icon" class="fas fa-chevron-left fa-3x"></i></div>
+                <div class="control" id="playing"><i id="playing-icon" class="fas fa-play fa-3x"></i></div>
+                <div class="control" id="next"><i id="next-icon" class="fas fa-chevron-right fa-3x"></i></div>
             </div>
         </div>
     </header>
     
     <main id="main">
-        <section id="map"></section>
-        <section id="reservation"></section>
+        <div id="map"></div>
+        <div id="info-station">
+            <div id="top">
+                <h3 class="title">Détails de la station</h3>
+                <i id="info-station-closed" class="fas fa-times"></i>
+            </div>
+            <div id="content-station">
+                <p id="name-station"></p>
+                <p id="address-station"></p>
+                <p id="available-bikes"></p>
+            </div>
+            <div id="bottom">
+                <button class="button" id="reservation-button">Réserver</button>
+            </div>
+        </div>
     </main>
+
+    <section id="reservation">
+        <div id="content-reservation">
+            <h3>Signer pour réserver</h3>
+            <input type="text" id="last-name" name="last-name" placeholder="Nom" required>
+            <input type="text" id="first-name" name="first-name" placeholder="Prénom" required>
+            <canvas id="canvas"></canvas>
+            <div class="buttons">
+                <input id="erase" type="button" value="Effacer">
+                <input id="submit" type="button" value="Envoyer">
+            </div>
+            <button id="cancel">Annuler</button>
+        </div>
+    </section>
+
     <footer id="footer">
-        <section id="status"></section>
+        <div id="status-reservation"></div>
+        <div id="time"></div>
+        <button id="cancel-reservation">Annuler la réservation</button>
     </footer>
 </body>
 
-
 </html>
-
-<script src="public/js/slider.js"></script>

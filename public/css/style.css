@@ -7,6 +7,11 @@ body {
 
 .fas {
     color: white;
+    cursor: pointer;
+}
+
+.button {
+    cursor: pointer;
 }
 
 /************************ HEADER ************************/
@@ -46,7 +51,7 @@ body {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-#slider-control .button {
+#slider-control .control {
     width: 5%;
     display: flex;
     justify-content: center;
@@ -73,32 +78,97 @@ body {
     align-items: center;
     border-top: 1px pink solid;
     border-bottom: 1px pink solid;
-    background-color: #c2c2c2;
+    background-color: whitesmoke;
 }
 
-#main #map {
-    width: 1000px;
-    height: 700px;
-    background-color: white;
-    box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
-
-}
-
-#main #reservation {
-    width: 600px;
-    height: 700px;
-    background-color: white;
+#map {
+    width: 100%;
+    height: 90%;
+    margin: 15px;
     box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
 }
+
+#info-station {
+    height: 90%;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+}
+
+#top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#top h3 {
+    margin: 0;
+}
+
+#info-station-closed {
+    color: black;
+    cursor: pointer;
+}
+
+#info-station-closed:hover {
+    color: red;
+}
+
+#bottom {
+    display: flex;
+    justify-content: center;
+}
+
+/************************ RESERVATION ************************/
+
+#reservation {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: width 4s;
+}
+
+#content-reservation {
+    z-index: 1;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+}
+
+/************************ CANVAS ************************/
+
+#canvas {
+    width: 300px;
+    height: 150px;
+    border: 1px solid #45505b;
+}
+
 
 /************************ FOOTER ************************/
 
 #footer {
     width: 100%;
     height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-#footer #status {
+#status {
     width: 100%;
-    background-color: rgb(175, 31, 31);
 }
