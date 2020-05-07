@@ -7,9 +7,9 @@ import Slider from './Slider.js';
 function init() {
     const sliderResources = {
         path: "public/img/",
-        images: ["alaska.jpg", "bears.jpg", "husky.jpg", "lac.jpg", "wolf.jpg"],
-        timer: 2000,
-        sizeTabImages: 5
+        images: ["01.jpg", "02.jpg", "03.png", "04.jpg"],
+        timer: 5000,
+        sizeTabImages: 4
     }
     const mapResources = {
         velibApi: "https://api.jcdecaux.com/vls/v1/stations?contract=Toulouse&apiKey=b884174d1ad1c3b2c5d02f5da69f3a885a306a01",

@@ -54,7 +54,6 @@ export default class Map {
     addEventOnStation(station, marker) {
 
         marker.addListener('click', () => {
-            console.log(marker);
             this.setMarker(marker);
 
             this.stationNameElement.innerHTML = 'Station: ' + station.name;
@@ -99,10 +98,28 @@ export default class Map {
         });
     }
 
+    getApi(urlApi, callback) {
+        const request = new XMLHttpRequest();
+    
+        request.onreadystatechange = function () {
+            if (this.readyState == XMLHttpRequest.DONE) {
+                if (this.status == 200) {
+                    const jsonResponse = JSON.parse(request.responseText);
+                    callback(jsonResponse);
+                } else {
+                    console.error(request.status + " " + request.statusText + " " + urlApi);
+                }
+            }
+        };
+    
+        request.open("GET", urlApi);
+        request.send()
+    }
+
     initMap() {
 
         this.map = new google.maps.Map(this.mapElement, this.mapParameters);
-        getApi(this.velibApi, (stations) => { this.putStations(stations) });
+        this.getApi(this.velibApi, (stations) => { this.putStations(stations) });
         this.infoStationElement.hide();
     }
 }
