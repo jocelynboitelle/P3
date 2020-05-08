@@ -24,6 +24,7 @@
 
 <body>
     <header id="header">
+        <h1 id="welcome">Bienvenue sur le <strong id="title-app">Vélib'Rose</strong></h1>
         <div id="slider">
             <img id="slide">
             <div id="slider-control">
@@ -32,25 +33,32 @@
                 <div class="control" id="next"><i id="next-icon" class="fas fa-chevron-right fa-3x"></i></div>
             </div>
         </div>
+        <div id="text-slider"></div>
     </header>
+
+    <hr>
     
     <main id="main">
-        <div id="map"></div>
-        <div id="info-station">
-            <div id="top">
-                <h3 class="title">Détails de la station</h3>
-                <i id="info-station-closed" class="fas fa-times"></i>
-            </div>
-            <div id="content-station">
-                <p id="name-station"></p>
-                <p id="address-station"></p>
-                <p id="available-bikes"></p>
-            </div>
-            <div id="bottom">
-                <button class="button" id="reservation-button">Réserver</button>
+        <div id="container-map">
+            <div id="map"></div>
+            <div id="info-station">
+                <div id="top">
+                    <h3 class="title">Détails de la station</h3>
+                    <i id="info-station-closed" class="fas fa-times"></i>
+                </div>
+                <div id="content-station">
+                    <p id="name-station"></p>
+                    <p id="address-station"></p>
+                    <p id="available-bikes"></p>
+                </div>
+                <div id="bottom">
+                    <button class="button" id="reservation-button">Réserver</button>
+                </div>
             </div>
         </div>
     </main>
+
+    <hr>
 
     <section id="reservation">
         <div id="content-reservation">
@@ -58,18 +66,18 @@
             <input type="text" id="last-name" name="last-name" placeholder="Nom" required>
             <input type="text" id="first-name" name="first-name" placeholder="Prénom" required>
             <canvas id="canvas"></canvas>
+            <input id="erase" class="button" type="button" value="Effacer">
             <div class="buttons">
-                <input id="erase" type="button" value="Effacer">
-                <input id="submit" type="button" value="Envoyer">
+                <button id="cancel" class="button" >Annuler</button>
+                <input id="submit" class="button" type="button" value="Envoyer">
             </div>
-            <button id="cancel">Annuler</button>
         </div>
     </section>
 
     <footer id="footer">
         <div id="status-reservation"></div>
         <div id="time"></div>
-        <button id="cancel-reservation">Annuler la réservation</button>
+        <button id="cancel-reservation" class="button">Annuler la réservation</button>
     </footer>
 </body>
 

@@ -2,6 +2,7 @@ export default class Slider {
 
     path;
     images;
+    texts;
     timer;
     sizeTabImages;
 
@@ -10,6 +11,7 @@ export default class Slider {
     nextButton;
     prevButton;
     slide;
+    textSlider;
     
     index;
     playing;
@@ -18,6 +20,7 @@ export default class Slider {
     constructor(resources) {
         this.path = resources.path;
         this.images = resources.images;
+        this.texts = resources.texts;
         this.timer = resources.timer;
         this.sizeTabImages = resources.sizeTabImages;
         this.index = 0;
@@ -27,6 +30,7 @@ export default class Slider {
         this.nextButton = document.getElementById('next');
         this.prevButton = document.getElementById('prev');
         this.slide = document.getElementById('slide');
+        this.textSlider = $('#text-slider');
         
         this.playingButton.onclick = () => this.checkstatus();
         this.nextButton.onclick = () => this.nextSlide();
@@ -38,6 +42,7 @@ export default class Slider {
 
     setImage() {
         this.slide.src = this.path + this.images[this.index];
+        this.textSlider.html(this.texts[this.index]);
     }
 
     checkstatus() {

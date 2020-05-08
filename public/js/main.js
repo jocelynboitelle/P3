@@ -7,7 +7,8 @@ import Slider from './Slider.js';
 function init() {
     const sliderResources = {
         path: "public/img/",
-        images: ["01.jpg", "02.jpg", "03.png", "04.jpg"],
+        images: ["01.jpg", "02.jpg", "03.jpg", "04.jpg"],
+        texts:["Je sélectionne ma station", "Je réserve", "Je saisis mon Nom, Prénom, je signe et valide", "Ma réservation est valable pendant 20 min, une nouvelle réservation remplacera la précedente"],
         timer: 5000,
         sizeTabImages: 4
     }

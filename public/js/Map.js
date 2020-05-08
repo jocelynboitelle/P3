@@ -25,8 +25,8 @@ export default class Map {
 
         this.velibApi = resources.velibApi;
         this.mapParameters = resources.mapParameters;
-        this.velib = '/P3/public/img/bicycle.png';
-        this.velibSelected = '/P3/public/img/bicycle_shop.png';
+        this.velib = '/P3/public/img/marker1.png';
+        this.velibSelected = '/P3/public/img/marker2.png';
         this.marker = null;
 
         this.initMap();
@@ -43,10 +43,10 @@ export default class Map {
 
     setMarker(marker) {
         if (this.marker != null) {
-            const icon = this.createIcon(this.velib, 30);
+            const icon = this.createIcon(this.velib, 36);
             this.marker.setIcon(icon);
         }
-        const iconSelected = this.createIcon(this.velibSelected, 42);
+        const iconSelected = this.createIcon(this.velibSelected, 60);
         marker.setIcon(iconSelected);
         this.marker = marker;
     }
@@ -81,7 +81,7 @@ export default class Map {
             position: station.position,
             map: this.map,
             title: station.name,
-            icon: this.createIcon(this.velib, 30)
+            icon: this.createIcon(this.velib, 36)
         });
         this.setVisibleMarker(marker);
                 
