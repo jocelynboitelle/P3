@@ -3,11 +3,11 @@
 
 <head>
     <meta charset=utf-8>
-    <meta name="description" content="Retrouvez les stations de vélibs sur Todivouse.">
+    <meta name="description">
     <meta name="viewport" content="width=device-width">
     <title>Vélib'Rose</title>
     <link rel="stylesheet" href="public/css/style.css" type="text/css">
-    <link rel="shortcut icon" href="public/img/bicycle.ico">
+    <link rel="shortcut icon" href="public/img/marker.png">
     <script type="module" src="public/js/main.js"></script>
     <script type="module" src="public/js/Slider.js"></script>
     <script type="module" src="public/js/Map.js"></script>
@@ -24,7 +24,7 @@
 
 <body>
     <header id="header">
-        <h1 id="welcome">Bienvenue sur le <strong id="title-app">Vélib'Rose</strong></h1>
+        <h1 id="welcome">Bienvenue sur le <em id="title-app">Vélib'Rose</em></h1>
         <div id="slider">
             <img id="slide">
             <div id="slider-control">
@@ -63,13 +63,13 @@
     <section id="reservation">
         <div id="content-reservation">
             <h3>Signer pour réserver</h3>
-            <input type="text" id="last-name" name="last-name" placeholder="Nom" required>
-            <input type="text" id="first-name" name="first-name" placeholder="Prénom" required>
+            <input type="text" id="last-name" class="input" name="last-name" placeholder="Nom" required>
+            <input type="text" id="first-name" class="input" name="first-name" placeholder="Prénom" required>
             <canvas id="canvas"></canvas>
             <input id="erase" class="button" type="button" value="Effacer">
             <div class="buttons">
                 <button id="cancel" class="button" >Annuler</button>
-                <input id="submit" class="button" type="button" value="Envoyer">
+                <input id="submit" class="button" type="button" value="Valider">
             </div>
         </div>
     </section>

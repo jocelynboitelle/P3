@@ -21,9 +21,9 @@ body {
     background-size: cover;
 }
 
-h1 {
+#welcome {
     font-family: 'adam';
-    font-variant: small-caps;
+    font-variant: all-small-caps;
     text-align: center;
     color: white;
     font-size: 50px;
@@ -40,19 +40,21 @@ hr {
 #title-app {
     color: #f8bbd0;
     font-style: oblique;
+    font-weight: 300;
     font-size: 60px;
 }
 
 #text-slider {
-    width: 1200px;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.6);
-    padding: 5px;
+    padding: 5px 0;
     margin: 10px 0;
     font-family: 'roboto';
     font-variant: small-caps;
+    font-style: oblique;
     color: white;
     text-align: center;
-    font-size: 45px;
+    font-size: 35px;
 }
 
 /************************ ICONS ************************/
@@ -212,12 +214,19 @@ hr {
     background-color: white;
 }
 
+.input {
+    border: 1px solid;
+    border-radius: 2px;
+    padding: 2px;
+}
+
 /************************ CANVAS ************************/
 
 #canvas {
     width: 300px;
     height: 150px;
     border: 1px solid #45505b;
+    border-radius: 2px;
 }
 
 
@@ -241,4 +250,50 @@ hr {
 
 #status {
     width: 100%;
+}
+
+@media (max-width: 767px) { 
+    
+    #header {
+        height: 370px;
+    }
+
+    #welcome {
+        font-size: 25px;
+    }
+
+    #title-app {
+        font-size: 40px;
+    }
+
+    #slider {
+        width: auto;
+    }
+
+    #slider-control .control {
+        width: auto;
+    }
+
+    #text-slider {
+        font-size: 20px;
+    }
+
+    #container-map {
+        width: 98%;
+    }
+
+    #info-station {
+        width: auto;
+    }
+
+    #content-reservation {
+        padding: 2px;
+        width: auto;
+    }
+
+    #footer {
+        height: auto;
+        text-align: center;
+        padding: 10px 0;
+    }
 }
