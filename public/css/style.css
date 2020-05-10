@@ -34,7 +34,7 @@ body {
 hr {
     margin: 0;
     border: none;
-    height: 3px;
+    height: 2px;
     background-image: linear-gradient(to right, #f8bbd000, #f8bbd0, #f8bbd0, #f8bbd000);
 }
 

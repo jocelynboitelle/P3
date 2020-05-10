@@ -25,8 +25,8 @@ export default class Map {
 
         this.velibApi = resources.velibApi;
         this.mapParameters = resources.mapParameters;
-        this.velib = '/P3/public/img/marker1.png';
-        this.velibSelected = '/P3/public/img/marker2.png';
+        this.velib = './public/img/marker1.png';
+        this.velibSelected = './public/img/marker2.png';
         this.marker = null;
 
         this.initMap();
