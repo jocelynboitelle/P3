@@ -7,10 +7,10 @@ import Slider from './Slider.js';
 function init() {
     const sliderResources = {
         path: "public/img/",
-        images: ["01.jpg", "02.jpg", "03.jpg", "04.jpg"],
-        texts:["I. Je sélectionne ma station", "II. Je réserve", "III. Je saisis mon Nom, Prénom, je signe et valide", "IV. Ma réservation est valable pendant 20 min, une nouvelle réservation remplacera la précedente"],
+        images: ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "04.jpg"],
+        texts:["I. Je sélectionne ma station", "II. Je réserve", "III. Je saisis mon Nom, Prénom, je signe et valide", "IV. Ma réservation est valable pendant 20 min", "Une nouvelle réservation remplacera la précedente"],
         timer: 5000,
-        sizeTabImages: 4
+        sizeTabImages: 5
     }
     const mapResources = {
         velibApi: "https://api.jcdecaux.com/vls/v1/stations?contract=Toulouse&apiKey=b884174d1ad1c3b2c5d02f5da69f3a885a306a01",
